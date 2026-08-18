@@ -1,0 +1,42 @@
+---
+description: Core standards for this AI capstone frontend project
+alwaysApply: true
+---
+
+# AI Capstone Project Standards
+
+This is a small, production-ready AI-enhanced frontend application. Keep the codebase simple and understandable for a student developer.
+
+## Stack
+
+- **Next.js** with **TypeScript**
+- **Tailwind CSS** for styling
+- **React** functional components and hooks
+
+Do not introduce additional libraries unless the user explicitly requests them and the need is clear.
+
+## Code Quality
+
+- Prefer simple, readable code over clever abstractions
+- Avoid complex architecture (no premature layers, microservices, or state-management libraries)
+- Match existing patterns in the repo before adding new ones
+- Keep changes focused — do not refactor unrelated code
+
+## UI Requirements
+The application should turn user requests into useful, structured interactive plans rather than only displaying plain AI text. Plans may include tasks, timing, progress, and reminders when these features are implemented.
+- Build **accessible** interfaces (semantic HTML, labels, keyboard navigation, ARIA where needed)
+- Make layouts **responsive** (mobile-first with Tailwind breakpoints)
+- Always handle **loading**, **error**, and **empty** states in data-driven views
+
+```tsx
+// ✅ GOOD — explicit UI states
+if (isLoading) return <Spinner />;
+if (error) return <ErrorMessage message={error.message} />;
+if (!items.length) return <EmptyState />;
+```
+
+## Agent Behavior
+
+- **Explain important changes** before making them (architecture, new dependencies, file structure)
+- **Do not invent features** that have not been requested
+- Ask for clarification when requirements are ambiguous instead of guessing
